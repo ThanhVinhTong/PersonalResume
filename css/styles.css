@@ -1,0 +1,258 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header {
+    background: linear-gradient(135deg, #00FFFF, #00AA00);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background: #111;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: cyan;
+    color: black;
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* 
+    About Me 
+*/
+.about-image img {
+    width: 12%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.5);
+    transition: transform 0.3s ease; /* Add smooth transition */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.about-image img:hover {
+    transform: scale(1.5);
+    box-shadow: 0 6px 16px rgba(0, 255, 255, 0.8);
+}
+
+.about-content span {
+    font-weight: bold;
+    background: linear-gradient(135deg, #00FFFF, #00AA00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 
+    Educations 
+*/
+.education-section ul {
+    padding-left: 18px;
+}
+
+.education-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+}
+
+.education-section .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+    Personal Experience
+*/
+.container{
+	padding: 35px 10%;
+	padding-right: calc(10% - 30px);
+}
+
+main.row{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+
+.col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid #bababa;
+    margin-left: 150px;
+}
+
+.col .contents .box {
+	position: relative;
+	padding: 20px;
+	border: 1px solid #eaeaea;
+	background-color: #ffffff;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.col .contents .box:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    background-color: #f7f7f7;
+    color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.col .contents .box::before {
+	content: '';
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right: calc(100% + 22px);
+	top: 100;
+	background-color: #008f5a;
+	border: 2px solid white;
+}
+
+.col .contents .timeline-date {
+    display: flex;
+    align-items: left;
+    color: #11a372;
+    font-weight: bold;
+    width: 155px;
+}
+
+.box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.box.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box img{
+    width: 100px;
+    height: 100px;
+}
+
+.box h4 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #008f5a;
+}
+
+.box h3 {
+    font-size: 20px;
+    color: #006837;
+    font-weight: bold;
+}
+
+.box p{
+	line-height: 1.2;
+	color: #333;
+	font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    .col .contents {
+        margin-left: 20px;  /* Reduce space for better fit */
+        border-left: 2px solid #11a372;
+    }
+    .timeline-date {
+        left: 0;
+        text-align: left;
+    }
+}
+
+/* 
+    Projects 
+*/
+.card-body {
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-body:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 12px rgba(0, 255, 255, 0.4);
+}
+
+.btn-project {
+    background: linear-gradient(135deg, #00FFFF, #00AA00);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-project:hover {
+    background: white;
+    color: black;
+}
+
+/* Contact */
+.contact {
+    border: 1px solid cyan;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.form-control {
+    background: #111;
+    color: white;
+    border: 1px solid cyan;
+}
+
+.send-btn {
+    background-color: cyan;
+    color: black;
+}
+
+.reset-btn {
+    background-color: green;
+    color: white;
+}
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Better alignment for smaller screen */
+@media (max-width: 768px) {
+    .card.d-flex {
+        flex-direction: column;
+        align-items: start;
+    }
+}
