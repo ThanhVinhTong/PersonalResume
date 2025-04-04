@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.querySelectorAll(".btn-project").forEach(button => {
     button.addEventListener("click", function () {
         // Redirect to the link stored in data-url attribute
-        window.location.href = this.getAttribute("href");
+        window.location.href = this.getAttribute("value");
     });
 
     button.addEventListener("mouseover", () => {
