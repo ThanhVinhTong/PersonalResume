@@ -504,3 +504,15 @@ main.row {
     }
 }
 
+.preferred-name-box {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    background: #f8f9fa;
+    color: #007bff;
+    font-weight: bold;
+    margin-left: 6px;
+    font-size: 1em;
+}
+
