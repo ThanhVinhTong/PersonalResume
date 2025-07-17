@@ -49,14 +49,22 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
     
+    // Time send
+    const now = new Date();
+    const pad = n => n.toString().padStart(2, '0');
+    const formatted = `${pad(now.getDate())}-${pad(now.getMonth() + 1)}-${now.getFullYear()} ${pad(now.getHours())}-${pad(now.getMinutes())}`;
+
     // Create template parameters from form
     const templateParams = {
         from_name: form.name.value,
         from_email: form.email.value,
         phone: form.tel.value,
+        title: form.subject.value,
         subject: form.subject.value,
+        tel: form.tel.value,
+        time: formatted,
         message: form.message.value,
-        to_email: "vinhtongthanh57@gmail.com"
+        to_email: "vincent.tong369@gmail.com"
     };
 
     // Send email using EmailJS
