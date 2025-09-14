@@ -76,7 +76,7 @@ export default function App() {
                     <div className="text-sm text-muted-foreground">Technologies</div>
                   </div>
                   <div className="text-center p-4 border rounded-lg">
-                    <div className="text-2xl font-bold text-primary">2024</div>
+                    <div className="text-2xl font-bold text-primary">2025</div>
                     <div className="text-sm text-muted-foreground">Graduate</div>
                   </div>
                 </div>
