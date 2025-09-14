@@ -3,8 +3,18 @@ import { Button } from "./ui/button";
 import { Separator } from "./ui/separator";
 import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPhone, FaHeart } from 'react-icons/fa';
 
-export function Footer() {
+interface FooterProps {
+  onTabChange?: (tabValue: string) => void;
+}
+
+export function Footer({ onTabChange }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  
+  const handleTabClick = (tabValue: string) => {
+    if (onTabChange) {
+      onTabChange(tabValue);
+    }
+  };
   
   return (
     <footer className="border-t bg-background">
@@ -37,18 +47,30 @@ export function Footer() {
           <div>
             <h3 className="mb-4">Quick Links</h3>
             <div className="space-y-2 text-sm">
-              <a href="#overview" className="block text-muted-foreground hover:text-foreground transition-colors">
+              <button 
+                onClick={() => handleTabClick('overview')} 
+                className="block text-left text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
                 Portfolio Overview
-              </a>
-              <a href="#experience" className="block text-muted-foreground hover:text-foreground transition-colors">
+              </button>
+              <button 
+                onClick={() => handleTabClick('experience')} 
+                className="block text-left text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
                 Work Experience
-              </a>
-              <a href="#projects" className="block text-muted-foreground hover:text-foreground transition-colors">
+              </button>
+              <button 
+                onClick={() => handleTabClick('projects')} 
+                className="block text-left text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
                 Personal Projects
-              </a>
-              <a href="#skills" className="block text-muted-foreground hover:text-foreground transition-colors">
+              </button>
+              <button 
+                onClick={() => handleTabClick('skills')} 
+                className="block text-left text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+              >
                 Skills & Qualifications
-              </a>
+              </button>
             </div>
           </div>
           

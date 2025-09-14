@@ -259,14 +259,6 @@ export function PersonalProjects() {
                           <span className="ml-2">Code</span>
                         </a>
                       </Button>
-                      {project.homepage && (
-                        <Button size="sm" className="flex-1 flex items-center justify-center" asChild>
-                          <a href={project.homepage} target="_blank" rel="noopener noreferrer">
-                            <FaExternalLinkAlt size={16} />
-                            <span className="ml-2">Demo</span>
-                          </a>
-                        </Button>
-                      )}
                     </div>
                   </CardContent>
                 </Card>

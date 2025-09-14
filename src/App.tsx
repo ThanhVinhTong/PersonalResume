@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 import { ResumeHeader } from "./components/resume-header";
@@ -11,13 +12,19 @@ import { Toaster } from "./components/ui/sonner";
 import { Briefcase, Code, Award, Mail, User } from "lucide-react";
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState("overview");
+
+  const handleTabChange = (tabValue: string) => {
+    setActiveTab(tabValue);
+  };
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       
       <main className="flex-1">
         <div className="container max-w-6xl mx-auto px-4 py-8">
-          <Tabs defaultValue="overview" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-5 mb-8">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <User className="h-4 w-4" />
@@ -120,7 +127,7 @@ export default function App() {
         </div>
       </main>
       
-      <Footer />
+      <Footer onTabChange={handleTabChange} />
       <Toaster />
     </div>
   );
