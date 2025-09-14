@@ -1,74 +1,159 @@
 # Personal Resume Website
 
-A responsive personal resume website built with HTML, CSS, JavaScript and Bootstrap that showcases my professional profile, experiences and projects.
+A modern, responsive personal resume website built with React, TypeScript, and Vite. This project showcases my professional profile, experiences, and projects with a clean, interactive interface.
 
-## Features
+## ✨ Features
 
-- Responsive design that works across desktop, tablet and mobile devices
-- Modern UI with smooth animations and transitions
-- Interactive navigation tabs for different sections:
-  - Basic Information
-  - Professional Experience
-  - Personal Projects  
+- **Modern Tech Stack**: Built with React 18, TypeScript, and Vite for optimal performance
+- **Responsive Design**: Fully responsive layout that works seamlessly across all devices
+- **Interactive UI**: Smooth animations and transitions using Tailwind CSS
+- **Dynamic Content**: 
+  - GitHub API integration for live project data
+  - Real-time project updates from your repositories
+  - Featured projects with detailed descriptions
+- **Professional Sections**:
+  - Resume Header with contact information
+  - Professional Experience timeline
+  - Featured Projects showcase
   - Skills & Qualifications
-  - Contact Form
+  - Contact Form with EmailJS integration
 
-## Technologies Used
+## 🚀 Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 4.5.2
-- EmailJS for contact form functionality
-- External APIs:
-  - API Ninjas for random quotes
+### Frontend
+- **React 18** - Modern UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Icons** - Icon library (Font Awesome)
 
-## Key Components
+### UI Components
+- **Radix UI** - Accessible component primitives
+- **Shadcn/ui** - Pre-built component library
+- **Lucide React** - Beautiful icons
 
-### Header
-- Professional introduction
-- Dynamic inspirational quotes that refresh hourly
+### External Services
+- **GitHub API** - Live repository data
+- **EmailJS** - Contact form functionality
 
-### Basic Information
-- Profile image with zoom effect
-- Personal statement
-- Education history
-- Contact details
+## 📁 Project Structure
 
-### Professional Experience
-- Timeline view of work history
-- Animated content reveal on scroll
-- Detailed role descriptions
-
-### Projects
-- Interactive project cards
-- Technology stack tags
-- Direct links to GitHub repositories
-
-### Skills & Qualifications 
-- Technical skills overview
-- Awards and certifications
-- Professional achievements
-
-### Contact Form
-- EmailJS integration
-- Form validation
-- Success/error notifications
-
-## Setup & Usage
-
-1. Clone the repository:
-```bash
-git clone https://github.com/ThanhVinhTong/PersonalResume.git
+```
+src/
+├── components/
+│   ├── ui/                 # Reusable UI components
+│   ├── contact-section.tsx # Contact form
+│   ├── footer.tsx         # Footer component
+│   ├── header.tsx         # Navigation header
+│   ├── personal-projects.tsx # Projects showcase
+│   ├── professional-experience.tsx # Work experience
+│   ├── resume-header.tsx  # Main header
+│   └── skills-qualifications.tsx # Skills section
+├── styles/
+│   └── globals.css        # Global styles
+├── App.tsx               # Main app component
+├── main.tsx             # Entry point
+└── index.css            # Base styles
 ```
 
-2. Open `thanhvinhtong_resume.html` in a web browser
+## 🛠️ Setup & Development
 
-3. Configure EmailJS:
-- Sign up at EmailJS.com
-- Update the EmailJS credentials in resumeScript.js
-- Set up your email template
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-## License
+### Installation
 
-This project is open source and available under the MIT License.
+1. **Clone the repository:**
+```bash
+git clone https://github.com/ThanhVinhTong/PersonalResume.git
+cd PersonalResume
+```
+
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn install
+```
+
+3. **Start development server:**
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+4. **Open your browser:**
+Navigate to `http://localhost:5173`
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+The built files will be in the `dist/` directory.
+
+## 🎯 Key Features
+
+### 📱 Single Page Application (SPA) with Tabbed Navigation
+- **5 Interactive Tabs**: Clean, intuitive navigation between different sections
+  - **Overview**: Professional summary with key statistics and welcome message
+  - **Experience**: Detailed work history and professional timeline
+  - **Projects**: Featured projects showcase + dynamic GitHub repository loading
+  - **Skills**: Technical skills, qualifications, and achievements
+  - **Contact**: Interactive contact form with EmailJS integration
+- **Smooth Animations**: Motion-powered transitions between tabs with fade-in effects
+- **Icon-Enhanced Navigation**: Each tab features relevant icons for better UX
+
+### 🔄 Dynamic Project Loading
+- **GitHub API Integration**: Automatically fetches your live repository data
+- **Smart Filtering**: Excludes featured projects from the dynamic list
+- **Rich Project Cards**: Shows star counts, descriptions, tech stacks, and live demo links
+- **Real-time Updates**: Automatically reflects new projects when you push to GitHub
+- **Loading States**: Professional loading indicators and error handling
+
+### 📱 Responsive Design & Performance
+- **Mobile-First Approach**: Optimized for all screen sizes and devices
+- **Touch-Friendly**: Intuitive touch interactions on mobile and tablet
+- **Fast Loading**: Vite-powered build system for optimal performance
+- **Modern UI**: Clean, professional design with Tailwind CSS
+- **Accessibility**: Built with Radix UI for screen reader compatibility
+
+## 🔧 Configuration
+
+### GitHub API Integration
+The project automatically fetches your repositories from:
+```
+https://api.github.com/users/ThanhVinhTong/repos
+```
+
+### EmailJS Setup
+1. Sign up at [EmailJS.com](https://www.emailjs.com/)
+2. Create a service and template
+3. Update the EmailJS configuration in `contact-section.tsx`
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+**Thanh Vinh Tong**
+- GitHub: [@ThanhVinhTong](https://github.com/ThanhVinhTong)
+- LinkedIn: https://www.linkedin.com/in/thanh-vinh-tong-b02b5016b/
+- Email: vincent.tong369@gmail.com
+
+---
+
+⭐ If you found this project helpful, please give it a star!
