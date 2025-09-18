@@ -1,4 +1,4 @@
-# Personal Resume Website
+# Vincent Portfolio Website
 
 A modern, responsive personal resume website built with React, TypeScript, and Vite. This project showcases my professional profile, experiences, and projects with a clean, interactive interface.
 
@@ -66,8 +66,8 @@ src/
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/ThanhVinhTong/PersonalResume.git
-cd PersonalResume
+git clone https://github.com/ThanhVinhTong/vincent-portfolio.git
+cd vincent-portfolio
 ```
 
 2. **Install dependencies:**
